@@ -1,0 +1,133 @@
+.register {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; // Added padding for smaller screens
+
+  .card {
+    width: 100%; // Full width on smaller screens
+    max-width: 1200px; // Max width for larger screens
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); // Added shadow for depth
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://images.pexels.com/photos/4881619/pexels-photo-4881619.jpeg?auto=compress&cs=tinysrgb&w=1600")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rebeccapurple;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s, color 0.3s; // Added transition for hover effect
+
+        &:hover {
+          background-color: rebeccapurple;
+          color: white;
+        }
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      h1 {
+        color: #555;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+          transition: border-color 0.3s; // Added transition for input focus
+
+          &:focus {
+            border-color: rebeccapurple; // Change border color on focus
+            outline: none; // Remove default outline
+          }
+        }
+
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+          transition: background-color 0.3s; // Added transition for hover effect
+
+          &:hover {
+            background-color: #7a7fdb; // Darker shade on hover
+          }
+        }
+      }
+    }
+  }
+
+  // Media Queries for Responsiveness
+  @media (max-width: 768px) {
+    .card {
+      flex-direction: column; // Stack the card elements on smaller screens
+
+      .left, .right {
+        padding: 20px; // Reduce padding for smaller screens
+      }
+
+      .left {
+        h1 {
+          font-size: 50px; // Reduce font size for smaller screens
+          line-height: 60px; // Adjust line height
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    .card {
+      .left {
+        h1 {
+          font-size: 40px; // Further reduce font size for very small screens
+          line-height: 50px; // Adjust line height
+        }
+      }
+    }
+  }
+}
