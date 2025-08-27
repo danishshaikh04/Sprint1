@@ -74,7 +74,8 @@ File Upload
 
 🔧 Setup Instructions
 
-Backend
+**Backend**
+
 cd server
 npm install
 npm start
@@ -82,21 +83,32 @@ npm start
 Ensure MySQL database is running and connect.js has correct credentials.
 
 Set .env file:
+
 PORT=8800
+
 DB_HOST=localhost
+
 DB_USER=root
+
 DB_PASSWORD=yourpassword
+
 DB_NAME=socialweb
+
 JWT_SECRET=your_jwt_secret
 
-Frontend
-cd client
-npm install
-npm start
 
-Open http://localhost:3000 in your browser.
+**Frontend**
+
+cd client 
+
+npm install 
+
+npm start 
+
+**Open http://localhost:3000 in your browser.**
 
 **🖼 Screenshots**
+
 **Login page**<img width="1772" height="891" alt="image" src="https://github.com/user-attachments/assets/b6544777-9442-4c74-b0be-99cee669382b" />
 
 **Signup page**<img width="1630" height="806" alt="image" src="https://github.com/user-attachments/assets/66c1530f-bb84-42b9-a095-65b9a1ed3773" />
