@@ -1,7 +1,4 @@
-markdown
 
-Run
-Copy code
 # Social-Web
 
 Social-Web is a full-stack social media web application built with React, Node.js, Express, MySQL, and React Query. Users can create accounts, post content, like posts, comment, follow other users, and update their profile including profile and cover pictures.
